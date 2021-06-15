@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "6.0.0"
+}
+
+mainClassName = "com.calculusmaster.pokecord.Pokecord"
+
+group 'com.calculusmaster'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+
+    maven {
+        url "https://libraries.minecraft.net"
+    }
+}
+
+dependencies {
+    implementation 'net.dv8tion:JDA:4.2.1_265'
+    implementation 'org.mongodb:mongodb-driver-sync:4.3.0-beta1'
+    implementation 'org.json:json:20200518'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    implementation group: 'com.opencsv', name: 'opencsv', version: '5.3'
+    implementation 'com.mojang:brigadier:1.0.17'
+}
